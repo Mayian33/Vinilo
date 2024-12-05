@@ -48,7 +48,8 @@ body {
     flex-direction: column;
     /* Alinea verticalmente los logos */
     align-items: center;
-    right: 5%;
+    right: -2%;
+    top: -10%;
 }
 
 .logos img {
@@ -58,7 +59,7 @@ body {
 }
 
 .logos img .logo {
-    height: 20vh;
+    height: 10vh;
 }
 
 .logos img {
@@ -78,7 +79,7 @@ body {
 
 /* tamaño especifico para el main logo */
 .logos .logo {
-    height: 20vh;
+    height: 40vh;
     width: auto;
 }
 
