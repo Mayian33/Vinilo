@@ -34,21 +34,53 @@ body {
     min-height: 100vh;
 }
 
+/* NAVBAR */
+/* Posicion fija arriba del nav-bar */
+nav {
+    position: fixed;
+    z-index: 1000;
+    /* Menú esta por encima de otros elementos */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Agrega una sombra para darle profundidad */
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    background-color: #eee2cc;
+}
+
+/* FIN NAVBAR */
+
+
 .title {
     font-family: Title;
     font-size: 10vh;
+    top: 12%;
     left: 50%;
     transform: translateX(-50%);
 }
 
+/* LOGOS */
+
+.logo img {
+    height: 4rem;
+}
+
 .logos {
     display: flex;
-    /* Cambia la dirección a columna para alinearlos verticalmente */
     flex-direction: column;
-    /* Alinea verticalmente los logos */
     align-items: center;
-    right: -2%;
-    top: -10%;
+    right: 2%;
+    top: 30%;
 }
 
 .logos img {
@@ -67,19 +99,11 @@ body {
     margin: 40px 0;
 }
 
-/* .logos img .logo {
-    height: 20vh;
-} */
+/* FIN LOGOS */
 
 .imagen .img {
     position: absolute;
     margin-top: 20vh;
-}
-
-/* tamaño especifico para el main logo */
-.logos .logo {
-    height: 40vh;
-    width: auto;
 }
 
 .titulo {
@@ -95,7 +119,7 @@ body {
 
 .nombre {
     font-family: nombre;
-    top: 20%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px;
@@ -105,7 +129,7 @@ body {
 .precio {
     font-family: Title;
     position: absolute;
-    top: 60%;
+    top: 55%;
     left: 45%;
     font-size: 8vh;
 }
@@ -113,7 +137,7 @@ body {
 .descripcion {
     font-family: nombre;
     position: absolute;
-    top: 86%;
+    top: 80%;
     left: 25%;
     transform: translate(-50%, -50%);
     padding: 10px;
@@ -210,7 +234,7 @@ footer {
     transition: all 0.3s;
 }
 
-/* CARD2 TRANSITION DESATIVADA MOVIMIENTO */
+/* CARD2 TRANSITION DESACTIVADA MOVIMIENTO */
 .card2 {
     border-radius: 0;
     /* transition: all 0.2s; */
@@ -233,7 +257,7 @@ footer {
     font-family: Title;
 }
 
-.fTitle{
+.fTitle {
     color: var(--blanco);
     font-family: Title;
 }
