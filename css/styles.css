@@ -170,280 +170,165 @@ body {
 
 
 /* INICIO FOOTER DE LA PAGINA */
-footer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    background-color: var(--negro);
-    color: var(--naranja);
-    background-size: cover;
+ul {
+    margin: 0px;
+    padding: 0px;
 }
-
-/* login y singup inicio */
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-bottom: 0.4em;
-    /* background-color: var(--primary); */
-    border-radius: 25px;
-    /* transition: 0.4s ease-in-out; */
-    margin-top: 26.4vh;
+.footer-section {
+  background: #151414;
+  position: relative;
 }
-
-.card {
-    background-image: linear-gradient(163deg,
-            var(--naranja) 0%,
-            var(--amarillo) 100%);
-    border-radius: 22px;
-    width: 100vh;
-    margin: 5vh;
-    transition: all 0.3s;
+.footer-cta {
+  border-bottom: 1px solid #373636;
 }
-
-/* CARD2 TRANSITION DESATIVADA MOVIMIENTO */
-.card2 {
-    border-radius: 0;
-    /* transition: all 0.2s; */
+.single-cta i {
+  color: var(--secondary);
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
 }
-
-.card2:hover {
-    /* transform: scale(0.98); */
-    border-radius: 20px;
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
 }
-
-.card:hover {
-    box-shadow: 0px 0px 30px 1px var(--naranja);
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
 }
-
-#heading {
-    text-align: center;
-    margin: 2em;
-    color: rgb(255, 255, 255);
-    font-size: 1.2em;
-    font-family: Title;
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
 }
-
-.fTitle{
-    color: var(--blanco);
-    font-family: Title;
+.footer-content {
+  position: relative;
+  z-index: 2;
 }
-
-.field {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5em;
-    border-radius: 25px;
-    padding: 0.6em;
-    border: none;
-    outline: none;
-    color: white;
-    background-color: var(--clearOrange);
-    box-shadow: inset 2px 5px 10px rgb(122, 68, 37);
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
 }
-
-.input-icon {
-    height: 1.3em;
-    width: 1.3em;
-    fill: white;
+.footer-logo {
+  margin-bottom: 30px;
 }
-
-.input-field {
-    background: none;
-    border: none;
-    outline: none;
-    width: 100%;
-    color: #d3d3d3;
+.footer-logo img {
+    max-width: 200px;
 }
-
-.form .btn {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 2.5em;
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+      color: #7e7e7e;
+  line-height: 28px;
 }
-
-.button1 {
-    padding: 0.5em;
-    padding-left: 1.1em;
-    padding-right: 1.1em;
-    border-radius: 5px;
-    margin-right: 0.5em;
-    border: none;
-    outline: none;
-    transition: 0.4s ease-in-out;
-    background-color: var(--primary);
-    color: white;
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
 }
-
-.button1:hover {
-    background-color: var(--clearOrange);
-    color: white;
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
 }
-
-.button2 {
-    padding: 0.5em;
-    padding-left: 2.3em;
-    padding-right: 2.3em;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    transition: 0.4s ease-in-out;
-    background-color: var(--primary);
-    color: white;
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
 }
-
-.button2:hover {
-    background-color: var(--clearOrange);
-    color: white;
+.facebook-bg{
+  background: #3B5998;
 }
-
-.button3 {
-    margin-bottom: 3em;
-    padding: 0.5em;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    transition: 0.4s ease-in-out;
-    background-color: var(--primary);
-    color: white;
+.twitter-bg{
+  background: #55ACEE;
 }
-
-.button3:hover {
-    background-color: var(--orange);
-    color: white;
+.google-bg{
+  background: #DD4B39;
 }
-
-/* log in y singup final */
-
-.contactotitle {
-    text-align: center;
-    border-top-left-radius: 10px;
-    padding: 2vh;
-    margin-top: 0;
-    color: var(--blanco);
-    font-family: Title;
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
 }
-
-.botonesfooter {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: var(--secondary);
 }
-
-/* BOTONES FOOTER INICIO */
-.about button {
-    background: var(--amarillo);
-    font-family: inherit;
-    padding: 0.6em 1.3em;
-    font-weight: 900;
-    font-size: 18px;
-    border: 3px solid var(--amarillo);
-    border-radius: 0.4em;
-    box-shadow: 0.1em 0.1em;
-    cursor: pointer;
-    margin-top: 20px;
+.footer-widget ul li {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin-bottom: 12px;
 }
-
-button:hover {
-    transform: translate(-0.05em, -0.05em);
-    box-shadow: 0.15em 0.15em var(--naranja);
+.footer-widget ul li a:hover{
+  color: var(--secondary);
 }
-
-button:active {
-    transform: translate(0.05em, 0.05em);
-    box-shadow: 0.05em 0.05em var(--blanco);
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
 }
-
-/* BOTONES FOOTER FIN */
-
-
-.informacion {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-columns: 1fr;
-    grid-template-rows: repeat(1, 1fr);
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
 }
-
-.informacion h3 {
-    text-align: center;
+.subscribe-form input {
+  width: 100%;
+  padding: 14px 28px;
+  background: #2E2E2E;
+  border: 1px solid #2E2E2E;
+  color: #fff;
 }
-
-.titlefooter {
-    text-align: center;
-    border-top-right-radius: 10px;
-    background-color: var(--amarillo);
-    padding: 2vh;
-    color: var(--blanco);
-    font-family: Title;
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: var(--secondary);
+    padding: 13px 20px;
+    border: 1px solid var(--secondary);
+    top: 0;
 }
-
-.containerinfo {
-    border: solid var(--amarillo);
+.subscribe-form button i {
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-6deg);
 }
-
-.txtarea {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.copyright-area{
+  background: #202020;
+  padding: 25px 0;
 }
-
-.txtarea {
-    margin-top: 40px;
-    padding-bottom: 10vh;
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
 }
-
-.txtarea textarea {
-    width: 60vh;
-    height: 20vh;
-    background-color: var(--negro);
-    color: var(--naranja);
+.copyright-text p a{
+  color: var(--secondary);
 }
-
-/* parte de logos para las redes sociales  */
-.button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
 }
-
-.button {
-    cursor: pointer;
-    text-decoration: none;
-    color: #ffff;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--primary);
-    border: 2px solid var(--primary);
-    transition: all 0.45s;
+.footer-menu li:hover a{
+  color: var(--secondary);
 }
-
-.button:hover {
-    transform: rotate(360deg);
-    transform-origin: center center;
-    background-color: var(--naranja);
-    color: #2d2e32;
-    box-shadow: 2px 1px var(--amarillo);
-}
-
-.button:hover .btn-svg {
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg) brightness(103%) contrast(103%);
-}
-
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
 }
 
 /* final de los logos para el footer */
