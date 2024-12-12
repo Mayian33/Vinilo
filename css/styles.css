@@ -37,7 +37,6 @@ body {
 .title {
     font-family: Title;
     font-size: 10vh;
-    top: -5%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -86,7 +85,7 @@ body {
 .titulo {
     font-family: Title;
     font-size: 7vh;
-    top: 35%;
+    top: 45%;
     left: 25%;
     transform: translate(-50%, -50%);
     padding: 10px;
@@ -96,7 +95,7 @@ body {
 
 .nombre {
     font-family: nombre;
-    top: 15%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px;
@@ -106,7 +105,7 @@ body {
 .precio {
     font-family: Title;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 45%;
     font-size: 8vh;
 }
@@ -114,7 +113,7 @@ body {
 .descripcion {
     font-family: nombre;
     position: absolute;
-    top: 77%;
+    top: 86%;
     left: 25%;
     transform: translate(-50%, -50%);
     padding: 10px;
