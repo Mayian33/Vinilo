@@ -1,218 +1,221 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap'); */
 
 @font-face {
-    font-family: Title;
-    src: url(../fonts/boowie/BOOWIE.ttf);
+  font-family: Title;
+  src: url(../fonts/boowie/BOOWIE.ttf);
 }
 
 @font-face {
-    font-family: nombre;
-    src: url(../fonts/apple_garamond/AppleGaramond-Bold.ttf);
+  font-family: nombre;
+  src: url(../fonts/apple_garamond/AppleGaramond-Bold.ttf);
 }
 
 @font-face {
-    font-family: texto;
-    src: url(../fonts/Faculty_Glyphic/FacultyGlyphic-Regular.ttf);
+  font-family: texto;
+  src: url(../fonts/Faculty_Glyphic/FacultyGlyphic-Regular.ttf);
 }
 
 :root {
-    --blanco: #ffffff;
-    --orange: #ca4212;
-    --clearOrange: #f1a78c;
-    --primary: #9e794c;
-    --secondary: #eab370;
+  --blanco: #ffffff;
+  --orange: #ca4212;
+  --clearOrange: #f1a78c;
+  --primary: #9e794c;
+  --secondary: #eab370;
 }
 
 body {
-    background-image: url(../img/fondoAbba.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-x: hidden;
-    /* para que historia que abajo */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  background-image: url(../img/fondoAbba.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  /* para que historia que abajo */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.title {
-    font-family: Title;
-    font-size: 10vh;
-    top: -5%;
-    left: 50%;
-    transform: translateX(-50%);
-}
+
 
 .logos {
-    display: flex;
-    /* Cambia la dirección a columna para alinearlos verticalmente */
-    flex-direction: column;
-    /* Alinea verticalmente los logos */
-    align-items: center;
-    right: -2%;
-    top: -10%;
+  display: flex;
+  /* Cambia la dirección a columna para alinearlos verticalmente */
+  flex-direction: column;
+  /* Alinea verticalmente los logos */
+  align-items: center;
+  right: -2%;
+  top: -10%;
 }
 
 .logos img {
-    width: 10vh;
-    height: auto;
-    margin: 40px 0;
+  width: 10vh;
+  height: auto;
+  margin: 40px 0;
 }
 
 .logos img .logo {
-    height: 10vh;
+  height: 10vh;
 }
 
 .logos img {
-    width: 10vh;
-    height: auto;
-    margin: 40px 0;
+  width: 10vh;
+  height: auto;
+  margin: 40px 0;
 }
 
-/* .logos img .logo {
-    height: 20vh;
-} */
-
 .imagen .img {
-    position: absolute;
-    margin-top: 20vh;
+  position: absolute;
+  margin-top: 20vh;
 }
 
 /* tamaño especifico para el main logo */
 .logos .logo {
-    height: 40vh;
-    width: auto;
+  height: 40vh;
+  width: auto;
 }
 
-.titulo {
-    font-family: Title;
-    font-size: 7vh;
-    top: 35%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    color: var(--blanco);
-    text-align: center;
+/* TITULOS */
+.titulos {
+  text-align: center;
+}
+
+.title {
+  font-family: Title;
+  font-size: 10vh;
 }
 
 .nombre {
-    font-family: nombre;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    text-align: center;
+  font-family: nombre;
+  padding: 10px;
+}
+
+.titulo {
+  font-family: Title;
+  font-size: 7vh;
+  top: 40%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  color: var(--blanco);
+  text-align: center;
 }
 
 .precio {
-    font-family: Title;
-    position: absolute;
-    top: 50%;
-    left: 45%;
-    font-size: 8vh;
+  font-family: Title;
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  font-size: 8vh;
 }
 
 .descripcion {
-    font-family: nombre;
-    position: absolute;
-    top: 77%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    color: var(--blanco);
-    text-align: center;
-    font-size: 2vh;
+  font-family: nombre;
+  position: absolute;
+  top: 85%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  color: var(--blanco);
+  text-align: center;
+  font-size: 2vh;
 }
 
+/* IMAGEN DEL VINILO */
 .img {
-    margin-left: 10vh;
-    height: 80vh;
+  top: 5%;
+  margin-left: 10vh;
+  height: 80vh;
 }
 
-/* Historia */
+/* HISTORIA */
 .imagen2 {
-    background-image: url('../img/historia1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 50px;
-    color: white;
-    position: relative;
-    margin-top: 50%;
-    margin-left: 30px;
-    margin-right: 30px;
-    border-radius: 4vh;
+  background-image: url('../img/historia1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px;
+  color: white;
+  position: relative;
+  margin-top: 50%;
+  margin-left: 30px;
+  margin-right: 30px;
+  border-radius: 4vh;
+  margin-bottom: 4rem;
 }
 
 .historia {
-    margin-left: 5%;
+  margin-left: 5%;
 }
 
 .bio {
-    font-family: nombre;
-    text-align: left;
-    margin-top: 5%;
-    font-size: 3vh;
-    width: 800px;
+  font-family: nombre;
+  text-align: left;
+  margin-top: 5%;
+  font-size: 3vh;
+  width: 800px;
 }
 
 .title2 {
-    font-family: Title;
-    font-size: 10vh;
+  font-family: Title;
+  font-size: 10vh;
 
 }
 
 .text {
-    color: var(--blanco);
-    font-family: texto;
+  color: var(--blanco);
+  font-family: texto;
 }
 
-.title,
 .logos,
 .titulo,
-.nombre,
 .descripcion {
-    z-index: 2;
-    position: absolute;
+  z-index: 2;
+  position: absolute;
 }
-
-
 
 /* INICIO FOOTER DE LA PAGINA */
 ul {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
+
 .footer-section {
   background: #151414;
   position: relative;
 }
+
 .footer-cta {
   border-bottom: 1px solid #373636;
 }
+
 .single-cta i {
   color: var(--secondary);
   font-size: 30px;
   float: left;
   margin-top: 8px;
 }
+
 .cta-text {
   padding-left: 15px;
   display: inline-block;
 }
+
 .cta-text h4 {
   color: #fff;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 2px;
 }
+
 .cta-text span {
   color: #757575;
   font-size: 15px;
 }
+
 .footer-content {
   position: relative;
   z-index: 2;
 }
+
 .footer-pattern img {
   position: absolute;
   top: 0;
@@ -221,18 +224,22 @@ ul {
   background-size: cover;
   background-position: 100% 100%;
 }
+
 .footer-logo {
   margin-bottom: 30px;
 }
+
 .footer-logo img {
-    max-width: 200px;
+  max-width: 200px;
 }
+
 .footer-text p {
   margin-bottom: 14px;
   font-size: 14px;
-      color: #7e7e7e;
+  color: #7e7e7e;
   line-height: 28px;
 }
+
 .footer-social-icon span {
   color: #fff;
   display: block;
@@ -241,11 +248,13 @@ ul {
   font-family: 'Poppins', sans-serif;
   margin-bottom: 20px;
 }
+
 .footer-social-icon a {
   color: #fff;
   font-size: 16px;
   margin-right: 15px;
 }
+
 .footer-social-icon i {
   height: 40px;
   width: 40px;
@@ -253,15 +262,19 @@ ul {
   line-height: 38px;
   border-radius: 50%;
 }
-.facebook-bg{
+
+.facebook-bg {
   background: #3B5998;
 }
-.twitter-bg{
+
+.twitter-bg {
   background: #55ACEE;
 }
-.google-bg{
+
+.google-bg {
   background: #DD4B39;
 }
+
 .footer-widget-heading h3 {
   color: #fff;
   font-size: 20px;
@@ -269,6 +282,7 @@ ul {
   margin-bottom: 40px;
   position: relative;
 }
+
 .footer-widget-heading h3::before {
   content: "";
   position: absolute;
@@ -278,23 +292,28 @@ ul {
   width: 50px;
   background: var(--secondary);
 }
+
 .footer-widget ul li {
   display: inline-block;
   /* float: left; */
   width: 50%;
   margin-bottom: 12px;
 }
-.footer-widget ul li a:hover{
+
+.footer-widget ul li a:hover {
   color: var(--secondary);
 }
+
 .footer-widget ul li a {
   color: #878787;
   text-transform: capitalize;
 }
+
 .subscribe-form {
   position: relative;
   overflow: hidden;
 }
+
 .subscribe-form input {
   width: 100%;
   padding: 14px 28px;
@@ -302,38 +321,46 @@ ul {
   border: 1px solid #2E2E2E;
   color: #fff;
 }
+
 .subscribe-form button {
-    position: absolute;
-    right: 0;
-    background: var(--secondary);
-    padding: 13px 20px;
-    border: 1px solid var(--secondary);
-    top: 0;
+  position: absolute;
+  right: 0;
+  background: var(--secondary);
+  padding: 13px 20px;
+  border: 1px solid var(--secondary);
+  top: 0;
 }
+
 .subscribe-form button i {
   color: #fff;
   font-size: 22px;
   transform: rotate(-6deg);
 }
-.copyright-area{
+
+.copyright-area {
   background: #202020;
   padding: 25px 0;
 }
+
 .copyright-text p {
   margin: 0;
   font-size: 14px;
   color: #878787;
 }
-.copyright-text p a{
+
+.copyright-text p a {
   color: var(--secondary);
 }
+
 .footer-menu li {
   display: inline-block;
   margin-left: 20px;
 }
-.footer-menu li:hover a{
+
+.footer-menu li:hover a {
   color: var(--secondary);
 }
+
 .footer-menu li a {
   font-size: 14px;
   color: #878787;
