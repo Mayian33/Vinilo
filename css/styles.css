@@ -34,16 +34,12 @@ body {
   min-height: 100vh;
 }
 
-
-
 .logos {
   display: flex;
-  /* Cambia la dirección a columna para alinearlos verticalmente */
   flex-direction: column;
-  /* Alinea verticalmente los logos */
   align-items: center;
-  right: -2%;
-  top: -10%;
+  right: 5%;
+  top: 30%;
 }
 
 .logos img {
@@ -52,7 +48,7 @@ body {
   margin: 40px 0;
 }
 
-.logos img .logo {
+.logos img {
   height: 10vh;
 }
 
@@ -68,10 +64,6 @@ body {
 }
 
 /* tamaño especifico para el main logo */
-.logos .logo {
-  height: 40vh;
-  width: auto;
-}
 
 /* TITULOS */
 .titulos {
