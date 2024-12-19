@@ -41,6 +41,15 @@ nav {
     /* Menú esta por encima de otros elementos */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     /* sombra para darle profundidad */
+    background-color: rgba(0, 0, 0, 0.8); /* Cambia esto a un color con opacidad */
+}
+
+.navbar a{
+  color: var(--blanco);
+}
+
+.navbar a:hover{
+  color: var(--secondary);
 }
 
 .fixed-top {
