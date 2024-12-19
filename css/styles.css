@@ -49,17 +49,11 @@ nav {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-
 /* FIN NAVBAR */
-
 
 .title {
     font-family: Title;
     font-size: 10vh;
-    top: 12%;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 /* LOGOS */
@@ -101,6 +95,7 @@ nav {
 
 /* TITULOS */
 .titulos {
+  margin-top: 5rem;
   text-align: center;
 }
 
