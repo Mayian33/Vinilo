@@ -34,8 +34,6 @@ body {
   min-height: 100vh;
 }
 
-
-
 .logos {
   display: flex;
   /* Cambia la dirección a columna para alinearlos verticalmente */
@@ -128,7 +126,7 @@ body {
 
 /* HISTORIA */
 .imagen2 {
-  background-image: url('../img/historia1.jpg');
+  background-image: url("../img/historia1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -157,7 +155,6 @@ body {
 .title2 {
   font-family: Title;
   font-size: 10vh;
-
 }
 
 .text {
@@ -171,6 +168,85 @@ body {
   z-index: 2;
   position: absolute;
 }
+
+/* INICIO SECTION MULTIMEDIA */
+.multi-container {
+ 
+  display: flex;
+  flex-direction: column; /* Apilamos los elementos verticalmente */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ocupa toda la altura de la ventana */
+  margin: 0;
+  padding: 0;
+}
+
+.multimedia {
+  display: grid; /* Usamos grid para organizar las celdas */
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  grid-template-rows: 1fr 1fr; /* Dos filas iguales */
+  gap: 3px; /* Espaciado entre elementos */
+  width: 90%; /* Ajusta el ancho del grid */
+  max-width: 1200px; /* Limita el tamaño máximo del grid */
+}
+
+.img1, .img3, .img2 {
+  display: flex; /* Flexbox para centrar el contenido dentro de cada celda */
+  justify-content: center;
+  align-items: center;
+}
+
+.img1 img{
+  max-width: 100%; /* Ajusta el tamaño al contenedor */
+  height: 20rem; /* Mantiene la proporción */
+}
+
+.img3 img{
+  max-width: 100%; /* Ajusta el tamaño al contenedor */
+  height: auto; /* Mantiene la proporción */
+}
+
+.img2 video {
+  width: 100%; /* El video se ajusta al contenedor */
+  height: 20rem; /* Mantiene la proporción del video */
+  border-radius: 8px; /* Opcional: bordes redondeados para estética */
+}
+
+.img2 {
+  grid-column: 1; /* Coloca el video en la primera columna */
+  grid-row: 1 / span 2; /* El video ocupa ambas filas */
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.img1 {
+  grid-column: 2; /* Coloca img1 en la segunda columna */
+  grid-row: 1; /* Coloca img1 en la primera fila */
+}
+
+.img3 {
+  grid-column: 2; /* Coloca img3 en la segunda columna */
+  grid-row: 2; /* Coloca img3 en la segunda fila */
+}
+
+.video-container {
+  display: flex;
+  justify-content: center; /* Centra el iframe horizontalmente */
+  align-items: center; /* Centra el iframe verticalmente */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 20px 0;
+  margin-bottom: 5rem;
+}
+
+.video-container iframe {
+  width: 80%; /* Ajusta el ancho del iframe */
+  max-width: 800px; /* Limita el tamaño máximo del iframe */
+  height: 450px; /* Proporción 16:9 */
+  border: none; /* Elimina el borde del iframe */
+}
+
+
+
 
 /* INICIO FOOTER DE LA PAGINA */
 ul {
@@ -245,7 +321,7 @@ ul {
   display: block;
   font-size: 20px;
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-bottom: 20px;
 }
 
@@ -264,15 +340,15 @@ ul {
 }
 
 .facebook-bg {
-  background: #3B5998;
+  background: #3b5998;
 }
 
 .twitter-bg {
-  background: #55ACEE;
+  background: #55acee;
 }
 
 .google-bg {
-  background: #DD4B39;
+  background: #dd4b39;
 }
 
 .footer-widget-heading h3 {
@@ -317,8 +393,8 @@ ul {
 .subscribe-form input {
   width: 100%;
   padding: 14px 28px;
-  background: #2E2E2E;
-  border: 1px solid #2E2E2E;
+  background: #2e2e2e;
+  border: 1px solid #2e2e2e;
   color: #fff;
 }
 
