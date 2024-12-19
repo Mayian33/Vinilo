@@ -48,8 +48,18 @@ body {
     flex-direction: column;
     /* Alinea verticalmente los logos */
     align-items: center;
-    right: 5%;
-    top: 300px;
+    right: -2%;
+    top: -10%;
+}
+
+.logos img {
+    width: 10vh;
+    height: auto;
+    margin: 40px 0;
+}
+
+.logos img .logo {
+    height: 10vh;
 }
 
 .logos img {
@@ -71,8 +81,6 @@ body {
 .logos .logo {
     height: 40vh;
     width: auto;
-    position: absolute;
-    top: -40vh;
 }
 
 .titulo {
