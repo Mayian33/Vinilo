@@ -155,6 +155,7 @@ body {
 .title2 {
   font-family: Title;
   font-size: 10vh;
+  color: var(--blanco);
 }
 
 .text {
@@ -173,79 +174,87 @@ body {
 .multi-container {
  
   display: flex;
-  flex-direction: column; /* Apilamos los elementos verticalmente */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ocupa toda la altura de la ventana */
+  min-height: 100vh; 
   margin: 0;
   padding: 0;
 }
 
 .multimedia {
-  display: grid; /* Usamos grid para organizar las celdas */
-  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-  grid-template-rows: 1fr 1fr; /* Dos filas iguales */
-  gap: 3px; /* Espaciado entre elementos */
-  width: 90%; /* Ajusta el ancho del grid */
-  max-width: 1200px; /* Limita el tamaño máximo del grid */
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 3px; 
+  width: 90%; 
+  max-width: 1200px; 
 }
 
 .img1, .img3, .img2 {
-  display: flex; /* Flexbox para centrar el contenido dentro de cada celda */
+  display: flex; 
   justify-content: center;
   align-items: center;
 }
 
 .img1 img{
-  max-width: 100%; /* Ajusta el tamaño al contenedor */
-  height: 20rem; /* Mantiene la proporción */
+  max-width: 100%; 
+  height: 20rem; 
 }
 
 .img3 img{
-  max-width: 100%; /* Ajusta el tamaño al contenedor */
-  height: auto; /* Mantiene la proporción */
+  max-width: 100%; 
+  height: auto; 
 }
 
 .img2 video {
-  width: 100%; /* El video se ajusta al contenedor */
-  height: 20rem; /* Mantiene la proporción del video */
-  border-radius: 8px; /* Opcional: bordes redondeados para estética */
+  width: 100%; 
+  height: 20rem; 
+  border-radius: 8px; 
 }
 
 .img2 {
-  grid-column: 1; /* Coloca el video en la primera columna */
-  grid-row: 1 / span 2; /* El video ocupa ambas filas */
+  grid-column: 1;
+  grid-row: 1 / span 2; 
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
 }
 
 .img1 {
-  grid-column: 2; /* Coloca img1 en la segunda columna */
-  grid-row: 1; /* Coloca img1 en la primera fila */
+  grid-column: 2; 
+  grid-row: 1; 
 }
 
 .img3 {
-  grid-column: 2; /* Coloca img3 en la segunda columna */
-  grid-row: 2; /* Coloca img3 en la segunda fila */
+  grid-column: 2;
+  grid-row: 2;
 }
 
 .video-container {
   display: flex;
-  justify-content: center; /* Centra el iframe horizontalmente */
-  align-items: center; /* Centra el iframe verticalmente */
-  width: 100%; /* Ocupa todo el ancho disponible */
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
   padding: 20px 0;
   margin-bottom: 5rem;
 }
 
 .video-container iframe {
-  width: 80%; /* Ajusta el ancho del iframe */
-  max-width: 800px; /* Limita el tamaño máximo del iframe */
-  height: 450px; /* Proporción 16:9 */
-  border: none; /* Elimina el borde del iframe */
+  width: 80%; 
+  max-width: 800px; 
+  height: 450px;
+  border: none; 
 }
 
+.video{
+  margin-top: 4rem;
+}
 
+.videotext {
+  color: var(--blanco);
+  font-family: texto;
+  text-align: center;
+}
 
 
 /* INICIO FOOTER DE LA PAGINA */
