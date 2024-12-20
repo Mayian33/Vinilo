@@ -160,6 +160,24 @@ nav {
   font-size: 8vh;
 }
 
+.compra {
+  position: absolute;
+  top: 70%;
+  left: 45%;
+  background-color: var(--orange);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.compra:hover {
+  background-color: #a32a0e;
+  transform: scale(1);
+}
+
 .descripcion {
   font-family: nombre;
   position: absolute;
