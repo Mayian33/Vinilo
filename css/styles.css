@@ -182,7 +182,7 @@ nav {
   font-family: nombre;
   position: absolute;
   top: 85%;
-  left: 25%;
+  left: 24%;
   transform: translate(-50%, -50%);
   padding: 10px;
   color: var(--blanco);
@@ -572,3 +572,4 @@ ul {
 }
 
 /* final de los logos para el footer */
+
