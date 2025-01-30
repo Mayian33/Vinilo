@@ -9,6 +9,7 @@
   <title>Catalogo</title>
   <link rel="preload" href="css/catalogo.css" as="style" />
   <link href="css/catalogo.css" rel="stylesheet" />
+  <script src="js/catalogo.js" defer></script>
 </head>
 
 <body>
@@ -63,27 +64,28 @@
       <!-- Modal -->
       <div id="modal" class="modal">
         <h2>Formulario</h2>
-        <form>
-          <label for="name">Nombre:</label><br>
-          <input type="text" id="name" name="name" required><br><br>
+        <form action="php/catalogoEnviar.php" method="POST">
+          <label for="text">Nombre:</label><br>
+          <input type="text" id="titulo" name="titulo" required><br><br>
           <label for="text">Descripción:</label><br>
-          <input type="text" id="descrip" name="descrip" required><br>
+          <input type="text" id="descripcion" name="descripcion" required><br>
           <label for="number">Precio:</label><br>
           <input type="number" id="precio" name="precio" required><br>
-          <label for="text">Imagen:</label><br>
-          <input type="text" id="image" name="image" required><br>
+          <label for="text">Imagen(url):</label><br>
+          <input type="text" id="imagen" name="imagen" required><br>
           <br>
           <button type="submit">Enviar</button>
         </form>
         <!-- Icono de cruz en la esquina superior derecha -->
         <a class="close-btn">
-          <img src="./icons/cerrar.png" alt="Botón cerrar"
-          style="width: 24px; height: 24px; cursor: pointer;" id="enableIcon">
+          <img src="./icons/cerrar.png" alt="Botón cerrar" style="width: 24px; height: 24px; cursor: pointer;"
+            id="enableIcon">
         </a>
       </div>
       <!-- Fondo oscuro -->
       <div class="overlay"></div>
 
+    
 
       <section class="cards">
         <article class="card card--1">
@@ -106,7 +108,7 @@
           </a>
           <div class="card__info">
             <span class="card__category">1974</span>
-            <h3 class="card__title">Waterloo</h3>
+            <h3 class="card__title">aaa</h3>
             <span class="card__by">by <a href="#" class="card__author" title="author">ABBA</a></span>
             <br>
             <div class="iconos">
