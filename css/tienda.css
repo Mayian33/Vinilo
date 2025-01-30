@@ -1,15 +1,22 @@
-/* General */
+:root {
+    --blanco: #FAFDF6;
+    --orange: #ca4212;
+    --clearOrange: #f1a78c;
+    --primary: #9e794c;
+    --secondary: #eab370;
+    --black: #151414;
+  }
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: var(--clearOrange);
 }
 
 /* Header */
 header {
-    background-color: #333;
-    color: white;
+    background-color: var(--black);
+    color: var(--blanco);
     text-align: center;
     padding: 20px 0;
     position: sticky;
@@ -51,7 +58,7 @@ main {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
     width: 250px;
-    text-align: center;
+    text-align: left;
     transition: transform 0.3s ease;
 }
 
@@ -65,11 +72,15 @@ main {
 }
 
 .vinilos-muestra h2 {
+    display: flex;
+    justify-content: left;
     font-size: 18px;
     margin: 10px 0;
 }
 
 .vinilos-muestra p {
+    display: flex;
+    justify-content: left;
     font-size: 14px;
     color: #555;
 }
@@ -79,4 +90,27 @@ main {
     font-weight: bold;
     color: #333;
     margin-top: 10px;
+}
+
+.btn-vinilos{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.vinilo-btn{
+    margin: 1rem;
+    border: solid var(--orange);
+    background-color: var(--blanco);
+    border-radius: 20px
+
+    
+
+}
+
+.vinilo-btn:hover{
+    background-color: var(--orange);
+    color: var(--blanco);
+    animation-duration: 10s;
+    transition: background-color 0.7s;
 }
