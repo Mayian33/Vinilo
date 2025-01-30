@@ -9,7 +9,7 @@
   <title>Catalogo</title>
   <link rel="preload" href="css/catalogo.css" as="style" />
   <link href="css/catalogo.css" rel="stylesheet" />
-  <script src="js/catalogo.js" defer></script>
+  <script src="/js/catalogo.js"></script>
 </head>
 
 <body>
@@ -64,14 +64,14 @@
       <!-- Modal -->
       <div id="modal" class="modal">
         <h2>Formulario</h2>
-        <form action="php/catalogoEnviar.php" method="POST">
+        <form id="surveyForm" action="catalogo.php" method="post">
           <label for="text">Nombre:</label><br>
           <input type="text" id="titulo" name="titulo" required><br><br>
           <label for="text">Descripción:</label><br>
           <input type="text" id="descripcion" name="descripcion" required><br>
           <label for="number">Precio:</label><br>
           <input type="number" id="precio" name="precio" required><br>
-          <label for="text">Imagen(url):</label><br>
+          <label for="text">Imagen:</label><br>
           <input type="text" id="imagen" name="imagen" required><br>
           <br>
           <button type="submit">Enviar</button>
