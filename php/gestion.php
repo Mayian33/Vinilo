@@ -2,7 +2,7 @@
 include_once "config.php";
 header('Content-Type: application/json');
 
-$sql = "SELECT id, imagen FROM discos";
+$sql = "SELECT id, imagen, titulo FROM discos";
 $result = $conn->query($sql);
 
 $imagenes = [];

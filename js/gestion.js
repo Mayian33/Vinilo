@@ -1,5 +1,18 @@
 $(document).ready(function () {
-    function cargaralbum() {
+    const modal = $('#Formulario');
+    const btnAbrir = $('#abrirpopup');
+    const spanCerrar = $('.cerrar')[0];
+
+    btnAbrir.click(() => modal.css('display', 'block'));
+    spanCerrar.onclick = () => modal.css('display', 'none');
+    
+    window.onclick = (event) => {
+        if (event.target == modal[0]) {
+            modal.css('display', 'none');
+        }
+    }
+
+    function cargarAlbum() {
         $.ajax({
             url: "./php/gestion.php",
             method: "GET",
@@ -11,13 +24,14 @@ $(document).ready(function () {
                         let estado = localStorage.getItem(`vinilo_${producto.id}`) === "hidden" ? "" : "checked";
 
                         html += `
-                            <div class="vinilo-item">
+                            <li class="vinilo-item">
                                 <img src="${producto.imagen}" alt="${producto.titulo}">
+                                <span class="vinilo-nombre">${producto.titulo}</span>
                                 <label class="switch">
                                     <input type="checkbox" class="toggle-visibility" data-id="${producto.id}" ${estado}>
                                     <span class="slider"></span>
                                 </label>
-                            </div>
+                            </li>
                         `;
                     });
                     $("#listaVinilos").html(html);
@@ -29,7 +43,8 @@ $(document).ready(function () {
         });
     }
 
-    $("#formAgregar").submit(function (event) {
+    // Agregar un nuevo vinilo
+    $("#agregar_vinilos").submit(function (event) {
         event.preventDefault();
         let datos = {
             titulo: $("#titulo").val(),
@@ -38,17 +53,18 @@ $(document).ready(function () {
             imagen: $("#imagen").val(),
         };
 
-        $.post("agregar_vinilos.php", datos, function (response) {
+        $.post("./php/agregar_vinilos.php", datos, function (response) {
             if (response.success) {
                 alert("Vinilo agregado correctamente");
                 $("#agregar_vinilos")[0].reset();
-                cargaralbum();
+                cargarAlbum();
             } else {
                 alert("Error al agregar vinilo");
             }
         }, "json");
     });
 
+    // Guardar estado del switch en localStorage
     $("#listaVinilos").on("change", ".toggle-visibility", function () {
         let id = $(this).data("id");
         let estado = $(this).is(":checked") ? "visible" : "hidden";
@@ -56,5 +72,5 @@ $(document).ready(function () {
         localStorage.setItem(`vinilo_${id}`, estado);
     });
 
-    cargaralbum();
+    cargarAlbum();
 });

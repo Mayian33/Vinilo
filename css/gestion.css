@@ -1,6 +1,15 @@
 /* ====== FUENTES Y ESTILOS GENERALES ====== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+:root {
+    --blanco: #FAFDF6;
+    --orange: #ca4212;
+    --clearOrange: #f1a78c;
+    --primary: #9e794c;
+    --secondary: #eab370;
+    --black: #151414;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,8 +18,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #1e1e2f, #3a3a59);
-    color: #fff;
+    background: linear-gradient(to right, var(--black), var(--primary));
+    color: var(--blanco);
     text-align: center;
 }
 
@@ -36,100 +45,161 @@ main {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* ====== FORMULARIO DE AGREGAR VINILOS ====== */
-form {
+/* ====== MODAL ====== */
+.formulario {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.content{
+    background: linear-gradient(to bottom right, var(--black), var(--primary));
+    margin: 5% auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    position: relative;
+    animation: aparecer 0.3s ease-out;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes aparecer {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.cerrar {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    color: var(--blanco);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.cerrar:hover {
+    color: var(--orange);
+}
+
+.boton-agregar {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    background: var(--orange);
+    color: var(--blanco);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.boton-agregar:hover {
+    background: var(--clearOrange);
+    transform: translateY(-2px);
+}
+
+/* ====== FORMULARIO EN MODAL ====== */
+#agregar_vinilos {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 15px;
-}
-
-form input {
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: all 0.3s ease-in-out;
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    border-bottom: 2px solid transparent;
-}
-
-form input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-form input:focus {
-    border-bottom: 2px solid #28a745;
-    background: rgba(255, 255, 255, 0.3);
-}
-
-form button {
-    padding: 12px 20px;
-    font-size: 16px;
-    background: linear-gradient(to right, #28a745, #218838);
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-form button:hover {
-    transform: scale(1.05);
-}
-
-/* ====== LISTADO DE VINILOS ====== */
-#listaVinilos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    gap: 15px;
     margin-top: 20px;
 }
 
-/* ====== TARJETA DE CADA VINILO ====== */
+#agregar_vinilos input {
+    padding: 12px;
+    border: 2px solid var(--secondary);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--blanco);
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#agregar_vinilos input:focus {
+    outline: none;
+    border-color: var(--orange);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+#agregar_vinilos button {
+    padding: 12px;
+    background: var(--orange);
+    color: var(--blanco);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s;
+}
+
+#agregar_vinilos button:hover {
+    background: var(--clearOrange);
+}
+
+/* ====== LISTADO DE VINILOS EN FORMATO DE LISTA ====== */
+#listaVinilos {
+    list-style: none;
+    padding: 0;
+}
+
 .vinilo-item {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 200px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
-}
-
-.vinilo-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
-}
-
-.vinilo-item img {
-    width: 100%;
-    height: auto;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    margin-bottom: 10px;
     border-radius: 8px;
-    border: 3px solid rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease-in-out;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto hover */
+.vinilo-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ====== IMAGEN ====== */
+.vinilo-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border: 2px solid var(--primary);
+    transition: border-color 0.3s ease;
 }
 
 .vinilo-item img:hover {
-    border-color: #28a745;
+    border-color: var(--orange);
 }
 
-/* ====== SWITCH DE VISIBILIDAD ====== */
+/* ====== NOMBRE DEL VINILO ====== */
+.vinilo-nombre {
+    flex-grow: 1;
+    margin-left: 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* ====== SWITCH DE VISIBILIDAD (BOTÓN A LA DERECHA) ====== */
 .switch {
     position: relative;
     display: inline-block;
     width: 50px;
     height: 26px;
-    margin-top: 10px;
+    margin-left: auto; /* Esto empuja el botón hacia la derecha */
 }
 
 .switch input {
@@ -145,7 +215,7 @@ form button:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: var(--clearOrange);
     transition: 0.4s;
     border-radius: 34px;
 }
@@ -163,7 +233,7 @@ form button:hover {
 }
 
 input:checked + .slider {
-    background-color: #28a745;
+    background-color: var(--orange);
 }
 
 input:checked + .slider:before {
@@ -177,6 +247,16 @@ input:checked + .slider:before {
     }
 
     .vinilo-item {
-        width: 150px;
+        flex-direction: row;
+        padding: 8px;
+    }
+
+    .vinilo-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .vinilo-nombre {
+        font-size: 14px;
     }
 }
