@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tienda</title>
+    <link rel="stylesheet" href="./css/gestion.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/gestion.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Gestión de Vinilos</h1>
+    </header>
+
+    <main>
+        <!-- Botón para abrir el modal -->
+        <button id="abrirpopup" class="boton-agregar">➕ Agregar Nuevo Vinilo</button>
+
+        <!-- Modal -->
+        <div id="Formulario" class="formulario">
+            <div class="content">
+                <span class="cerrar">&times;</span>
+                <h2>Añadir un nuevo vinilo</h2>
+                <form id="agregar_vinilos">
+                    <input type="text" id="titulo" placeholder="Título del disco" required>
+                    <input type="text" id="descripcion" placeholder="Descripción" required>
+                    <input type="number" id="precio" placeholder="Precio" step="0.01" required>
+                    <input type="text" id="imagen" placeholder="URL de la imagen" required>
+                    <button type="submit">Agregar Vinilo</button>
+                </form>
+            </div>
+        </div>
+
+        <h2>Administrar visibilidad</h2>
+        <ul id="listaVinilos"></ul>
+    </main>
+</body>
+</html>
