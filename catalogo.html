@@ -66,11 +66,20 @@
         <form>
           <label for="name">Nombre:</label><br>
           <input type="text" id="name" name="name" required><br><br>
-          <label for="email">Correo:</label><br>
-          <input type="email" id="email" name="email" required><br><br>
+          <label for="text">Descripción:</label><br>
+          <input type="text" id="descrip" name="descrip" required><br>
+          <label for="number">Precio:</label><br>
+          <input type="number" id="precio" name="precio" required><br>
+          <label for="text">Imagen:</label><br>
+          <input type="text" id="image" name="image" required><br>
+          <br>
           <button type="submit">Enviar</button>
         </form>
-        <a href="#" class="close-btn">Cerrar</a>
+        <!-- Icono de cruz en la esquina superior derecha -->
+        <a class="close-btn">
+          <img src="./icons/cerrar.png" alt="Botón cerrar"
+          style="width: 24px; height: 24px; cursor: pointer;" id="enableIcon">
+        </a>
       </div>
       <!-- Fondo oscuro -->
       <div class="overlay"></div>
