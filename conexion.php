@@ -17,7 +17,7 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-<?php
+
 include_once('conexion.php');
 
 $sql = "SELECT * FROM discos";
