@@ -9,7 +9,7 @@
   <title>Catalogo</title>
   <link rel="preload" href="css/catalogo.css" as="style" />
   <link href="css/catalogo.css" rel="stylesheet" />
-  <script src="/js/catalogo.js"></script>
+  <script src="js/catalogo.js"></script>
 </head>
 
 <body>
