@@ -1,5 +1,5 @@
 <?php
-include_once('configuracion.php');
+include_once('config.php');
 
 // Verificar si se han enviado datos por POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
