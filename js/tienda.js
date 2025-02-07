@@ -3,7 +3,7 @@ $(document).ready(function () {
   function cargar_items() {
     $.ajax({
       type: "GET",
-      url: "./php/tienda.php", // Ajusta la ruta si es necesario
+      url: "./php/tienda.php",
       dataType: "JSON",
       success: function (response) {
         if (response.success) {
@@ -66,12 +66,12 @@ $(document).ready(function () {
   $("#buscador").on("input", function () {
     const termino = $(this).val();
     if (termino.trim() === "") {
-      cargar_items(); // Carga todos los productos si el buscador está vacío
+      cargar_items();
     } else {
       buscarProductos(termino);
     }
   });
 
-  // Carga inicial de productos
+
   cargar_items();
 });

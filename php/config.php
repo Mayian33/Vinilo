@@ -1,6 +1,8 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+header('Content-Type: application/json');
+
 
 $servername = getenv('MYSQLHOST');
 $username = getenv('MYSQLUSER');
@@ -12,3 +14,4 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
+?>
