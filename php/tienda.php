@@ -3,11 +3,8 @@
 include_once "config.php";
 header('Content-Type: application/json');
 
-
-
 $sql="SELECT * FROM discos";
 $result= $conn->query($sql);
-
 
 $productos=[];
 
@@ -34,9 +31,5 @@ if($result->num_rows>0){
 }else{
     echo json_encode(['success' => false, 'error' => 'No hay datos disponibles']);
 }
-
-
-
-
 
 ?>
